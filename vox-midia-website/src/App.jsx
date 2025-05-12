@@ -1,4 +1,5 @@
 import Header from './components/Header'
+import MainFooter from './components/Footer'
 import { useState } from 'react'
 import './App.css'
 
@@ -11,6 +12,7 @@ function App() {
       <main>
 
       </main>
+      <MainFooter></MainFooter>
     </body>
      
     </>
