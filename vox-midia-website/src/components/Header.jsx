@@ -3,7 +3,7 @@ import MainButton from './MainButton'
 import './Header.css'
 import { Link } from 'react-router-dom'
 
-export default function Header (props) {
+export default function MainHeader (props) {
     return (
         <header className='bg-vox-3 backdrop-opacity-80 backdrop-blur-[4px] h-[66px] w-auto px-8 flex justify-between items-center hover:bgc' id="main-header">
             <img src={voxLogo} alt="Vox & Mídia Social Mídia" />

@@ -3,16 +3,22 @@ import {
   RouterProvider,
 } from 'react-router'
 
-import Header from './components/Header'
+import MainHeader from './components/Header'
 import MainFooter from './components/Footer'
+import RootLayout from './pages/Root'
+import HomePage from './pages/Home'
 import { useState } from 'react'
 import './App.css'
+import CasesPage from './pages/Cases'
 
 const router = createBrowserRouter ([
   {
     path:"/",
     element: <RootLayout />,
-    children: []
+    children: [
+      {index: true, element: <HomePage />},
+      {path: 'cases', element: <CasesPage />}
+    ]
   }
 ])
 
@@ -22,7 +28,7 @@ function App() {
   return (
     <>
     <body>
-      <Header />
+      <MainHeader />
       <main>
 
       </main>
