@@ -1,7 +1,9 @@
 export default function MainButton (props) {
     console.log(props)
+
+    // Com space consegue-se inserir classes personalizadas dependendo do local utilizado
     return (
-        <button className={`h-[${props.height}px] bg-stone-950 px-9 py-3 rounded-border border-1 border-neutral-700 text-white text-center font-bold font-pt-sans hover:bg-vox-3 hover:border-vox-7`}>
+        <button className={`${props.space} h-[${props.height}px] bg-stone-950 px-9 py-1 rounded-vox-5 border-1 border-neutral-700 text-white text-center font-bold font-pt-sans hover:bg-vox-3 hover:border-vox-7 duration-150 ease-in-out`}>
             {props.children}
         </button>
     )

@@ -1,5 +1,5 @@
-import { Outlet } from "react-router-dom";
-import MainHeader from "../components/Header";
+import { Outlet } from "react-router";
+import MainHeader from "../components/MainNavBar";
 import MainFooter from "../components/Footer";
 
 export default function RootLayout () {
@@ -7,7 +7,7 @@ export default function RootLayout () {
         <>
         <MainHeader></MainHeader>
         <main>
-            <Outlet></Outlet>
+            <Outlet />
         </main>
         <MainFooter></MainFooter>
         </>

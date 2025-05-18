@@ -3,7 +3,7 @@ import {
   RouterProvider,
 } from 'react-router'
 
-import MainHeader from './components/Header'
+import MainNavBar from './components/MainNavBar'
 import MainFooter from './components/Footer'
 import RootLayout from './pages/Root'
 import HomePage from './pages/Home'
@@ -16,27 +16,15 @@ const router = createBrowserRouter ([
     path:"/",
     element: <RootLayout />,
     children: [
-      {index: true, element: <HomePage />},
-      {path: 'cases', element: <CasesPage />}
+      { index: true, element: <HomePage /> },
+      { path: 'cases', element: <CasesPage /> } 
     ]
   }
-])
+]);
 
-
+// Aqui estou passando o router para o RouterProvider
 function App() {
-
-  return (
-    <>
-    <body>
-      <MainHeader />
-      <main>
-
-      </main>
-      <MainFooter></MainFooter>
-    </body>
-     
-    </>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App

@@ -20,7 +20,7 @@
   --font-pt-sans: PT Sans, sans-serif;
   --font-league-spartan: League Spartan;
 
-  --radius-border: 5px;
+  --radius-vox-5: 5px;
 }
 
 p {
@@ -28,9 +28,6 @@ p {
   color: var(--color-vox-8);
 }
 
-.container-grid {
-  
-}
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
