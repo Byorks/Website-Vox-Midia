@@ -22,6 +22,9 @@ export default function MainNavBar (props) {
     const handleOpen = () => {
 
     }
+    
+    // Estilização
+    let navStyle = 'md:flex md:items-center md:gap-6 md:pb-0 pb-12 md:static absolute left-0 top-[66px] md:bg-vox-3/0 md:backdrop-blur-none bg-vox-3/80 backdrop-blur-[4px] md:z-auto z-[-1] md:w-auto w-3xs md:pl-0  transition-all duration-300 ease-in-out rounded-br-vox-5 md:border-0 border-vox-6 border-b-[0.5px] border-r-[0.5px]';
 
     return (
         <header id="main-header" className='h-[66px] w-full bg-vox-3/80 backdrop-blur-[4px] px-6 md:px-8 flex justify-between items-center fixed top-0 left-0'>
@@ -46,11 +49,11 @@ export default function MainNavBar (props) {
             </div>
           
             <nav className='m-0'>
-                <ul className={`md:flex md:items-center md:gap-6 md:pb-0 pb-12 md:static absolute left-0 top-15 md:bg-vox-3/0 md:backdrop-blur-none bg-vox-3/80 backdrop-blur-[4px] md:z-auto z-[-1] md:w-auto w-3xs md:pl-0  transition-all duration-300 ease-in-out ${open ? 'left-0' : 'left-[-400px]'} rounded-br-vox-5 md:border-0 border-vox-6 border-b-[0.5px] border-r-[0.5px]`}>
+                <ul className={`${open ? 'left-0' : 'left-[-400px]'} ${navStyle}`}>
                     {
                     LINKS.map((link) => (
                         <li key={link.name} className='text-base md:py-0 py-4 pl-6 border-b-[0.5px] border-vox-6 md:border-0 '>
-                            <Link to={link.path} className='text-vox-7 hover:font-bold font-pt-sans duration-300 ease-in-out'>{link.name}</Link>
+                            <Link to={link.path} className='text-vox-7 hover:text-vox-8 hover:font-bold font-pt-sans duration-300 ease-in-out'>{link.name}</Link>
                         </li>
                     ))
                     }
@@ -59,17 +62,6 @@ export default function MainNavBar (props) {
                     >Contato
                     </MainButton>
                 </ul>
-
-            
-
-                {/* <ul className='flex items-center gap-6'>
-                    <li>
-                        {/* <Link className='text-white font-pt-sans text-base' to={'cases'}>Cases</Link>
-                        <a className='text-white font-pt-sans text-base hover:font-bold' href="">Cases</a></li>
-                    <li><a className='text-white font-pt-sans text-base hover:font-bold' href="">Serviços</a></li>
-                    <li><a className='text-white font-pt-sans text-base hover:font-bold' href="">Sobre nós</a></li>
-                    <li><MainButton height={"1000"}>Contato</MainButton></li>
-                </ul> */}
             </nav>
         </header>
     );

@@ -1,18 +1,33 @@
 import MainTitle from "./MainTitle";
+import SocialMediaButton from "./SocialMediaButton";
+
+import { Link } from "react-router";
 
 export default function MainFooter() {
+
+ let LINKS = [
+   {name:"Home", path:"/"},
+   {name:"Cases", path:"/"},
+   {name:"Serviços", path:"/"},
+   {name:"Contato", path:"/"},
+   {name:"Sobre nós", path:"/"},
+ ];
+
   return (
     <>
-      <footer className="bg-vox-2  columns-2 w-screen @container">
-        <div className="@md:w-[80%] m-auto max-w-[1128px]"> 
-          <div className="flex flex-col" >
+      <footer className="bg-vox-2 w-screen @container pt-8">
+
+        <div className="@md:w-[80%] m-auto max-w-[1128px] md:columns-2 md:flex md:justify-between"> 
+          <div className="flex flex-col w-full md:w-[50vh]" >
             <MainTitle>Conheça mais</MainTitle>
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              {
+              LINKS.map((link) => (
+                  <li key={link.name} className='text-base py-3'>
+                      <Link to={link.path} className='text-vox-7 hover:text-vox-8 hover:font-bold font-pt-sans duration-300 ease-in-out'>{link.name}</Link>
+                  </li>
+              ))
+              }
             </ul>
             <div>
               <MainTitle>Fale com a Vox & Mídia</MainTitle>
@@ -26,9 +41,12 @@ export default function MainFooter() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="flex flex-col w-full md:w-[50vh]">
             <div>
               <MainTitle>Nossas mídias sociais</MainTitle>
+              <div>
+                <SocialMediaButton></SocialMediaButton>
+              </div>
             </div>
 
             <div>
@@ -46,6 +64,14 @@ export default function MainFooter() {
               </p>
             </div>
           </div>
+        </div>  
+ 
+        
+        <div className="bg-vox-1 h-8 w-full">
+          <div className="@md:w-[80%] m-auto max-w-[1128px]">
+            <p className="text-sm">©Vox&Mídia 2025</p>
+          </div>
+         
         </div>
       </footer>
     </>

@@ -1,15 +1,15 @@
 import {
   createBrowserRouter,
   RouterProvider,
-} from 'react-router'
+} from 'react-router';
 
-import MainNavBar from './components/MainNavBar'
-import MainFooter from './components/Footer'
-import RootLayout from './pages/Root'
-import HomePage from './pages/Home'
-import { useState } from 'react'
-import './App.css'
-import CasesPage from './pages/Cases'
+import MainNavBar from './components/MainNavBar';
+import MainFooter from './components/MainFooter';
+import RootLayout from './pages/Root';
+import HomePage from './pages/Home';
+import { useState } from 'react';
+import './App.css';
+import CasesPage from './pages/Cases';
 
 const router = createBrowserRouter ([
   {
