@@ -27,7 +27,7 @@ export default function MainNavBar (props) {
     let navStyle = 'md:flex md:items-center md:gap-6 md:pb-0 pb-12 md:static absolute left-0 top-[66px] md:bg-vox-3/0 md:backdrop-blur-none bg-vox-3/80 backdrop-blur-[4px] md:z-auto z-[-1] md:w-auto w-3xs md:pl-0  transition-all duration-300 ease-in-out rounded-br-vox-5 md:border-0 border-vox-6 border-b-[0.5px] border-r-[0.5px]';
 
     return (
-        <header id="main-header" className='h-[66px] w-full bg-vox-3/80 backdrop-blur-[4px] px-6 md:px-8 flex justify-between items-center fixed top-0 left-0'>
+        <header id="main-header" className='h-[66px] w-full bg-vox-3/80 backdrop-blur-[4px] px-6 md:px-8 flex justify-between items-center sticky z-1000 top-0 left-0'>
             
             <div className='flex'>
                   <img 
