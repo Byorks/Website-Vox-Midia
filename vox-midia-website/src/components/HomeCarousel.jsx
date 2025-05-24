@@ -1,6 +1,7 @@
 import  introBanner  from '../assets/banners/banner-intro.png';
 import introBannerX2 from '../assets/banners/banner-intro-x2.png';
 import introBannerGnv from '../assets/banners/gnv-img.jpg';
+import introBannerMobile  from '../assets/banners/banner-intro-mobile.png'
 
 import {
   Carousel,
@@ -12,8 +13,7 @@ import {
 import Autoplay from 'embla-carousel-autoplay';
 
 export default function HomeCarousel() {
-  let srcSetList = introBanner + " 1440w " + introBannerX2 + " 2880w";
-  console.log(srcSetList)
+
   return (
     <Carousel 
         className="w-full"
@@ -27,11 +27,16 @@ export default function HomeCarousel() {
         {Array.from({ length: 2 }).map((_, index) => (
           <CarouselItem className='basis-full pl-0 ' key={index}>
             <div className="flex h-auto w-full ">
-                <img className='object-cover' src={introBanner}
-                    srcSet={srcSetList}
-                    sizes='(max-width: 1440px) 1440px, 2880px'
-                    alt="" 
-                />
+              <img className='block sm:hidden w-full' src={introBannerMobile} alt="Banner Vox & Mídia" />
+              <img className='hidden sm:block md:hidden w-full' src={introBanner} alt="Banner Vox & Mídia" />
+              <img className='hidden md:block  w-full' src={introBannerX2} alt="Banner Vox & Mídia" />
+                {/* <img 
+                    className='object-cover' 
+                    src={introBanner}
+                    srcSet={`${introBannerMobile} 430w, ${introBanner} 1440w, ${introBannerX2} 2880w`}
+                    
+                    alt="Banner Vox & Mídia" 
+                /> */}
             </div>
           </CarouselItem>
         ))}

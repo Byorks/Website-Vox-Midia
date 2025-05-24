@@ -21,6 +21,13 @@
   --font-league-spartan: League Spartan;
 
   --radius-vox-5: 5px;
+
+  /* 430px */
+  --breakpoint-xs: 27rem; 
+}
+
+body {
+  background-color: black;
 }
 
 p {

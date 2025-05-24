@@ -1,13 +1,22 @@
 import HomeCarousel from "../components/HomeCarousel";
+import MainTitle from "../components/MainTitle";
+import HomeCasesCarousel from "../components/HomeCasesCarousel";
+import CardCase from "../components/CardCases";
+
 
 export default function HomePage () {
     return (
         	<>
-            <div className="min-h-screen">
-                <h1>Teste</h1>
+            <section className="">
                 <HomeCarousel></HomeCarousel>
-            </div>
-            
+            </section>
+
+            <section className="my-16">
+                <MainTitle>Cases</MainTitle>
+                <HomeCasesCarousel>
+                </HomeCasesCarousel>
+                
+            </section>
             </>
     );
 }

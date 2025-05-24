@@ -3,6 +3,11 @@ import SocialMediaButton from "./SocialMediaButton";
 
 import { Link } from "react-router";
 
+import { Linkedin } from "lucide-react";
+import { Youtube } from "lucide-react";
+import { Mail } from "lucide-react";
+import { Phone } from "lucide-react";
+
 export default function MainFooter() {
 
  let LINKS = [
@@ -15,36 +20,39 @@ export default function MainFooter() {
 
   return (
     <>
-      <footer className="bg-vox-2 w-screen @container pt-8">
+      <footer className="bg-vox-2 w-screen @container">
 
         <div className="@md:w-[80%] m-auto max-w-[1128px] md:columns-2 md:flex md:justify-between"> 
           <div className="flex flex-col w-full md:w-[50vh]" >
-            <MainTitle>Conheça mais</MainTitle>
-            <ul>
-              {
-              LINKS.map((link) => (
-                  <li key={link.name} className='text-base py-3'>
-                      <Link to={link.path} className='text-vox-7 hover:text-vox-8 hover:font-bold font-pt-sans duration-300 ease-in-out'>{link.name}</Link>
-                  </li>
-              ))
-              }
-            </ul>
-            <div>
-              <MainTitle>Fale com a Vox & Mídia</MainTitle>
-              <div>
-                <img src="" alt="" />
-                <p></p>
+            <div className="flex flex-col py-4">
+              <MainTitle textAlign={"text-left"} marginBotton={"mb-3"}>Conheça mais</MainTitle>
+              <ul>
+                {
+                LINKS.map((link) => (
+                    <li key={link.name} className='text-base py-3'>
+                        <Link to={link.path} className='text-vox-7 hover:text-vox-8 hover:font-bold font-pt-sans duration-300 ease-in-out'>{link.name}</Link>
+                    </li>
+                ))
+                }
+              </ul>
+            </div>
+           
+            <div className="flex flex-col py-4">
+              <MainTitle textAlign={"text-left"} marginBotton={"mb-3"}>Fale com a Vox & Mídia</MainTitle>
+              <div className="flex pb-5">
+                <Mail color="#ffff" size={24}></Mail>
+                <p className="pl-3">vox&midia@email.com</p>
               </div>
-              <div>
-                <img src="" alt="" />
-                <p></p>
+              <div className="flex">
+                <Phone color="#ffff" size={24}></Phone>
+                <p className="pl-3">(11) 9000-0000</p>
               </div>
             </div>
           </div>
           <div className="flex flex-col w-full md:w-[50vh]">
-            <div>
-              <MainTitle>Nossas mídias sociais</MainTitle>
-              <div >
+            <div className="flex flex-col py-4">
+              <MainTitle textAlign={"text-left"} marginBotton={"mb-3"}>Nossas mídias sociais</MainTitle>
+              <div className="flex gap-6" >
                 <SocialMediaButton>
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M9.3335 4.00016C6.38798 4.00016 4.00016 6.38798 4.00016 9.3335V22.6668C4.00016 25.6123 6.38798 28.0002 9.3335 28.0002H22.6668C25.6123 28.0002 28.0002 25.6123 28.0002 22.6668V9.3335C28.0002 6.38798 25.6123 4.00016 22.6668 4.00016H9.3335ZM1.3335 9.3335C1.3335 4.91522 4.91522 1.3335 9.3335 1.3335H22.6668C27.0851 1.3335 30.6668 4.91522 30.6668 9.3335V22.6668C30.6668 27.0851 27.0851 30.6668 22.6668 30.6668H9.3335C4.91522 30.6668 1.3335 27.0851 1.3335 22.6668V9.3335Z" fill="currentColor"/>
@@ -53,15 +61,15 @@ export default function MainFooter() {
                   </svg>
                 </SocialMediaButton>
                 <SocialMediaButton>
-
+                  <Linkedin size={32}></Linkedin>
                 </SocialMediaButton>
                 <SocialMediaButton>
-                  
+                  <Youtube size={32}></Youtube>
                 </SocialMediaButton>
               </div>
             </div>
 
-            <div>
+            <div className="pt-4 pb-8">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                 ullamcorper non augue in lobortis. Donec sem sapien, blandit id
@@ -80,7 +88,7 @@ export default function MainFooter() {
  
         
         <div className="bg-vox-1 h-8 w-full">
-          <div className="@md:w-[80%] m-auto max-w-[1128px]">
+          <div className="@md:w-[80%] m-auto max-w-[1128px] p-2">
             <p className="text-sm">©Vox&Mídia 2025</p>
           </div>
          
