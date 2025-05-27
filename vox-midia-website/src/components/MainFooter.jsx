@@ -22,9 +22,9 @@ export default function MainFooter() {
     <>
       <footer className="bg-vox-2 w-screen @container">
 
-        <div className="@md:w-[80%] m-auto max-w-[1128px] md:columns-2 md:flex md:justify-between"> 
-          <div className="flex flex-col w-full md:w-[50vh]" >
-            <div className="flex flex-col py-4">
+        <div className="@md:w-[80%] m-auto max-w-[1128px] md:columns-2 flex flex-col-reverse md:flex-row md:justify-between"> 
+          <div className="flex flex-col w-full md:w-[50vh] md:order-1" >
+            <div className="flex flex-col py-4 order-1 md:order-1">
               <MainTitle textAlign={"text-left"} marginBotton={"mb-3"}>Conheça mais</MainTitle>
               <ul>
                 {
@@ -37,7 +37,7 @@ export default function MainFooter() {
               </ul>
             </div>
            
-            <div className="flex flex-col py-4">
+            <div className="flex flex-col py-4 order-2 md:order-2">
               <MainTitle textAlign={"text-left"} marginBotton={"mb-3"}>Fale com a Vox & Mídia</MainTitle>
               <div className="flex pb-5">
                 <Mail color="#ffff" size={24}></Mail>
@@ -49,8 +49,8 @@ export default function MainFooter() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col w-full md:w-[50vh]">
-            <div className="flex flex-col py-4">
+          <div className="flex flex-col w-full md:w-[50vh] o md:order-2">
+            <div className="flex flex-col py-4 order-1 md:order-3">
               <MainTitle textAlign={"text-left"} marginBotton={"mb-3"}>Nossas mídias sociais</MainTitle>
               <div className="flex gap-6" >
                 <SocialMediaButton pathName="https://www.instagram.com/">
@@ -69,7 +69,7 @@ export default function MainFooter() {
               </div>
             </div>
 
-            <div className="pt-4 pb-8">
+            <div className="pt-4 pb-8 order-4">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                 ullamcorper non augue in lobortis. Donec sem sapien, blandit id

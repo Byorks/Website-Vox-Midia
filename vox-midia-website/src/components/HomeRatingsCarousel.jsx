@@ -9,10 +9,11 @@ import Autoplay from "embla-carousel-autoplay";
 import { ArrowBigLeft } from "lucide-react";
 import CardCase from "./CardCases";
 import path from "path";
+import RatingCard from "./RatingCard";
 
 //Depois vou ter que inserir os dados através de uma lista de objetos
 
-export default function HomeCasesCarousel(props) {
+export default function HomeRatingsCarousel(props) {
   let CASES = [
     {
       title: "",
@@ -51,7 +52,7 @@ export default function HomeCasesCarousel(props) {
           // Aqui controla o tamanho de cada div
           <CarouselItem className="basis-1/1 md:basis-1/3 pl-3" key={index}> 
             <div className="flex justify-around">
-                <CardCase></CardCase>
+                <RatingCard></RatingCard>
             </div>
           
           </CarouselItem>
