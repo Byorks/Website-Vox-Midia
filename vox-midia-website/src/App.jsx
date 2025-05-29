@@ -10,6 +10,7 @@ import HomePage from './pages/Home';
 import { useState } from 'react';
 import './App.css';
 import CasesPage from './pages/Cases';
+import ServicesPage from './pages/Services';
 
 const router = createBrowserRouter ([
   {
@@ -17,7 +18,8 @@ const router = createBrowserRouter ([
     element: <RootLayout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: 'cases', element: <CasesPage /> } 
+      { path: 'cases', element: <CasesPage /> },
+      { path: 'services', element: <ServicesPage />}
     ]
   }
 ]);

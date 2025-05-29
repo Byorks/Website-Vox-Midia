@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { ArrowBigLeft } from "lucide-react";
-import CardCase from "./CardCases";
+import CaseCard from "./CardCases";
 import path from "path";
 
 //Depois vou ter que inserir os dados através de uma lista de objetos
@@ -38,7 +38,7 @@ export default function HomeCasesCarousel(props) {
 
   return (
     <Carousel
-      className="md:w-full max-w-[80%] lg:container m-auto"
+      className="w-full max-w-[80vw] container m-auto"
       plugins={[
         Autoplay({
           delay: 10000,
@@ -51,15 +51,15 @@ export default function HomeCasesCarousel(props) {
           // Aqui controla o tamanho de cada div
           <CarouselItem className="basis-1/1 md:basis-1/3 pl-3" key={index}> 
             <div className="flex justify-around">
-                <CardCase></CardCase>
+                <CaseCard></CaseCard>
             </div>
           
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselNext>
+      <CarouselNext className="-right-3 md:-right-10">
       </CarouselNext>
-      <CarouselPrevious>
+      <CarouselPrevious className="-left-3 md:-left-10">
       </CarouselPrevious>
     </Carousel>
   );

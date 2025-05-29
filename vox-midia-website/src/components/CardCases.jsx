@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-export default function CardCase() {
+export default function CaseCard() {
   return (
     <Card className="w-full h-full aspect-3/2 max-w-[408px] max-h-[286px] rounded-none border-[#3A3A3A] border-1 bg-vox-2">
       <CardHeader>

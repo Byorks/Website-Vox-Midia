@@ -9,7 +9,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { ArrowBigLeft } from "lucide-react";
 import CardCase from "./CardCases";
 import path from "path";
-import RatingCard from "./RatingCard";
+import RatingCard from "./CardRating";
 
 //Depois vou ter que inserir os dados através de uma lista de objetos
 
@@ -19,12 +19,12 @@ export default function HomeRatingsCarousel(props) {
       title: "",
       img: "",
       path: "",
-    },    
+    },
     {
       title: "",
       img: "",
       path: "",
-    },    
+    },
     {
       title: "",
       img: "",
@@ -35,11 +35,11 @@ export default function HomeRatingsCarousel(props) {
       img: "",
       path: "",
     },
-  ]
+  ];
 
   return (
     <Carousel
-      className="md:w-full max-w-[80%] lg:container m-auto"
+      className="w-full max-w-[80%] container m-auto"
       plugins={[
         Autoplay({
           delay: 10000,
@@ -50,17 +50,14 @@ export default function HomeRatingsCarousel(props) {
       <CarouselContent className="-ml-3 flex justify-around">
         {CASES.map((_, index) => (
           // Aqui controla o tamanho de cada div
-          <CarouselItem className="basis-1/1 md:basis-1/3 pl-3" key={index}> 
-            <div className="flex justify-around">
-                <RatingCard></RatingCard>
-            </div>
-          
+          <CarouselItem className="basis-1/1 md:basis-1/3 pl-3 flex justify-center" key={index}>
+            <RatingCard />
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselNext>
+      <CarouselNext className="-right-3 md:-right-10">
       </CarouselNext>
-      <CarouselPrevious>
+      <CarouselPrevious className="-left-3 md:-left-10">
       </CarouselPrevious>
     </Carousel>
   );

@@ -1,11 +1,10 @@
 import HomeCarousel from "../components/HomeCarousel";
 import MainTitle from "../components/MainTitle";
 import HomeCasesCarousel from "../components/HomeCasesCarousel";
-import CardCase from "../components/CardCases";
+import CaseCard from "../components/CardCases";
 import MainButton from "../components/MainButton";
 import AreaSmallCard from "../components/AreaSmallCard";
 import HomeRatingsCarousel from "../components/HomeRatingsCarousel";
-
 
 export default function HomePage () {
     let AREASCARDS = [
@@ -29,18 +28,18 @@ export default function HomePage () {
 
     return (
         	<>
-            <section className="">
+            <section className="w-screen">
                 <HomeCarousel></HomeCarousel>
             </section>
 
-            <section className="mt-16 mb-8 flex flex-col items-center">
+            <section className="w-screen mt-16 mb-8 flex flex-col items-center">
                 <MainTitle>Cases</MainTitle>
                 <HomeCasesCarousel />
                 <MainButton space="my-8">Conheça o portfólio</MainButton>
             </section>
 
             <section className="bg-vox-2 py-8 my-8">
-                <div className="container w-full m-auto ">
+                <div className="w-[80%] m-auto max-w-[1128px]">
                     <MainTitle>Principais Áreas de Atuação</MainTitle>
                     <div className="flex flex-col items-center md:flex-row md:justify-between gap-4">
                         {/* Criar lista com map */}

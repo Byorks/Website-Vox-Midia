@@ -4,7 +4,7 @@ import MainButton from './MainButton';
 import './MainNavBar.css';
 import { useState } from 'react';
 // Router
-import { Link } from 'react-router';
+import { NavLink } from 'react-router';
 
 // Icons
 import { Menu } from 'lucide-react';
@@ -12,9 +12,9 @@ import { X } from 'lucide-react';
 
 export default function MainNavBar (props) {
     let LINKS = [
-        {name:"Cases", path:"/"},
-        {name:"Serviços", path:"/"},
-        {name:"Sobre nós", path:"/"},
+        {name:"Cases", path:"/cases"},
+        {name:"Serviços", path:"/services"},
+        {name:"Sobre nós", path:"/about"},
     ];
 
     const [open, setOpen] = useState(false);
@@ -53,7 +53,7 @@ export default function MainNavBar (props) {
                     {
                     LINKS.map((link) => (
                         <li key={link.name} className='text-base md:py-0 py-4 pl-6 border-b-[0.5px] border-vox-6 md:border-0 '>
-                            <Link to={link.path} className='text-vox-7 hover:text-vox-8 hover:font-bold font-pt-sans duration-300 ease-in-out'>{link.name}</Link>
+                            <NavLink to={link.path} className='text-vox-7 hover:text-vox-8 hover:font-bold font-pt-sans duration-300 ease-in-out'>{link.name}</NavLink>
                         </li>
                     ))
                     }

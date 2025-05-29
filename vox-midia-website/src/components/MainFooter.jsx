@@ -20,12 +20,12 @@ export default function MainFooter() {
 
   return (
     <>
-      <footer className="bg-vox-2 w-screen @container">
+      <footer className="bg-vox-2 w-screen @container pt-4">
 
-        <div className="@md:w-[80%] m-auto max-w-[1128px] md:columns-2 flex flex-col-reverse md:flex-row md:justify-between"> 
+        <div className="w-[80%] m-auto max-w-[1128px] md:columns-2 flex flex-col-reverse md:flex-row md:justify-between"> 
           <div className="flex flex-col w-full md:w-[50vh] md:order-1" >
             <div className="flex flex-col py-4 order-1 md:order-1">
-              <MainTitle textAlign={"text-left"} marginBotton={"mb-3"}>Conheça mais</MainTitle>
+              <MainTitle textAlign={"text-left"} textSize={"text-2xl"} marginBotton={"mb-3"} >Conheça mais</MainTitle>
               <ul>
                 {
                 LINKS.map((link) => (
@@ -37,9 +37,9 @@ export default function MainFooter() {
               </ul>
             </div>
            
-            <div className="flex flex-col py-4 order-2 md:order-2">
-              <MainTitle textAlign={"text-left"} marginBotton={"mb-3"}>Fale com a Vox & Mídia</MainTitle>
-              <div className="flex pb-5">
+            <div className="flex flex-col gap-3 order-2 md:order-2">
+              <MainTitle textAlign={"text-left"} textSize={"text-2xl"} marginBotton={"mb-3"} >Fale com a Vox & Mídia</MainTitle>
+              <div className="flex">
                 <Mail color="#ffff" size={24}></Mail>
                 <p className="pl-3">vox&midia@email.com</p>
               </div>
@@ -49,9 +49,9 @@ export default function MainFooter() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col w-full md:w-[50vh] o md:order-2">
+          <div className="flex flex-col w-full md:w-[50vh] md:order-2">
             <div className="flex flex-col py-4 order-1 md:order-3">
-              <MainTitle textAlign={"text-left"} marginBotton={"mb-3"}>Nossas mídias sociais</MainTitle>
+              <MainTitle textAlign={"text-left"} textSize={"text-2xl"} marginBotton={"mb-3"} >Nossas mídias sociais</MainTitle>
               <div className="flex gap-6" >
                 <SocialMediaButton pathName="https://www.instagram.com/">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,9 +85,8 @@ export default function MainFooter() {
             </div>
           </div>
         </div>  
- 
-        
-        <div className="bg-vox-1 h-8 w-full">
+
+        <div className="bg-vox-1 h-8 mt-16 w-full">
           <div className="@md:w-[80%] m-auto max-w-[1128px] p-2">
             <p className="text-sm">©Vox&Mídia 2025</p>
           </div>
