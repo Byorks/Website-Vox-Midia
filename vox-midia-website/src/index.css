@@ -24,6 +24,8 @@
 
   /* 430px */
   --breakpoint-xs: 27rem; 
+
+  --aspect-card-details: 11 / 10;
 }
 
 body {
