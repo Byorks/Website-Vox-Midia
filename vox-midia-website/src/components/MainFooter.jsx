@@ -20,7 +20,7 @@ export default function MainFooter() {
 
   return (
     <>
-      <footer className="bg-vox-2 w-screen @container pt-4">
+      <footer className="bg-vox-2 w-full @container pt-4">
 
         <div className="w-[80%] m-auto max-w-[1128px] md:columns-2 flex flex-col-reverse md:flex-row md:justify-between"> 
           <div className="flex flex-col w-full md:w-[50vh] md:order-1" >

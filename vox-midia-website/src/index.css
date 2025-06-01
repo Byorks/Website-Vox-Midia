@@ -22,10 +22,51 @@
 
   --radius-vox-5: 5px;
 
+  /* 320px
+  --breakpoint-xxs: 20rem; */
+   
   /* 430px */
-  --breakpoint-xs: 27rem; 
+  --breakpoint-xs: 25rem;
 
   --aspect-card-details: 11 / 10;
+}
+
+@layer components {
+
+  /* Serve para criar grupos de classes juntos de uma classes só
+  ex */
+  /* .typography {
+    p {
+      font-size: var(--text-base);
+      color: var(--color-gray-700);
+    }
+
+    h1 {
+      font-size: var(--text-2xl--line-height);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
+  } */
+
+  /* 
+  TODO -> Descobrir porque não deu certo
+  .active {
+    button {
+      border-color: var(--color-vox-8);
+      border: var(--color-vox-8) 1px solid;
+      color: var(--color-vox-8);
+    }
+
+    button span {
+      color: var(--color-vox-8);
+    }
+  } */
 }
 
 body {
@@ -37,18 +78,13 @@ p {
   color: var(--color-vox-7);
 }
 
-/* :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* button.active {
+  border-color: var(--color-vox-8);
+  border: var(--color-vox-8) 1px solid;
+  color: var(--color-vox-8);
 }
+
+button.active span {
+  color: var(--color-vox-8);
+} */
 

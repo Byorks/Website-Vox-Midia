@@ -7,6 +7,7 @@ import MainNavBar from './components/MainNavBar';
 import MainFooter from './components/MainFooter';
 import RootLayout from './pages/Root';
 import HomePage from './pages/Home';
+import ProjectPage from './pages/Project';
 import { useState } from 'react';
 import './App.css';
 import CasesPage from './pages/Cases';
@@ -19,7 +20,8 @@ const router = createBrowserRouter ([
     children: [
       { index: true, element: <HomePage /> },
       { path: 'cases', element: <CasesPage /> },
-      { path: 'services', element: <ServicesPage />}
+      { path: 'services', element: <ServicesPage />},
+      { path: 'project', element: <ProjectPage />}
     ]
   }
 ]);
