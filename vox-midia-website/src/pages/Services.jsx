@@ -8,11 +8,11 @@ export default function ServicesPage() {
   let CARDS = [
     {
       title: "Marketing",
-      path: "/#marketing-section",
+      path: "#marketing-section",
     },
     {
       title: "Tecnologia",
-      path: "/#tecnology-section",
+      path: "#tecnology-section",
     },
     {
       title: "Branding",

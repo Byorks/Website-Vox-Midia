@@ -12,6 +12,7 @@ import { useState } from 'react';
 import './App.css';
 import CasesPage from './pages/Cases';
 import ServicesPage from './pages/Services';
+import ContactPage from './pages/Contact';
 
 const router = createBrowserRouter ([
   {
@@ -21,7 +22,8 @@ const router = createBrowserRouter ([
       { index: true, element: <HomePage /> },
       { path: 'cases', element: <CasesPage /> },
       { path: 'services', element: <ServicesPage />},
-      { path: 'project', element: <ProjectPage />}
+      { path: 'project', element: <ProjectPage />},
+      { path: 'contact', element: <ContactPage />}
     ]
   }
 ]);

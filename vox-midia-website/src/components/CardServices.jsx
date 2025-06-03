@@ -7,7 +7,7 @@ export default function ServiceCard (props) {
                 <SecondaryTitle>{props.children}</SecondaryTitle>
             </div>
             <div className="w-full h-auto rounded-b-[5px]">
-                <img className="w-full h-auto object-cover" src="https://unsplash.it/640/425?image=40" alt="" />
+                <img className="w-full h-auto object-cover rounded-b-[5px]" src="https://unsplash.it/640/425?image=40" alt="" />
             </div>
         </div>
     );

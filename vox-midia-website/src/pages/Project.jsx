@@ -3,6 +3,8 @@ import MainTitle from "../components/MainTitle";
 
 import { CASES_LINKS } from "../data";
 // TODO -> Criar component do projeton showcase
+// Criar uma forma de apresentar todas as imagens de forma dinâmica, onde seja possível renderizar as imagens com base em quantas estão vigentes
+
 export default function ProjectPage(props) {
   return (
     <main>

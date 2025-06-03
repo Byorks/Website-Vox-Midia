@@ -58,7 +58,9 @@ export default function MainNavBar (props) {
                     ))
                     }
 
-                    <MainButton space='md:ml-0 ml-6 md:mt-0 mt-4'
+                    <MainButton  
+                        space='md:ml-0 ml-6 md:mt-0 mt-4'
+                        path='/contact'
                     >Contato
                     </MainButton>
                 </ul>
