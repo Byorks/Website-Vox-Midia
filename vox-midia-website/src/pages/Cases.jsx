@@ -27,7 +27,7 @@ export default function CasesPage() {
     }
     
     tabContent = (
-      <div className=" w-full grid col-end-1 md:grid-cols-3 gap-7 px-4 md:px-0">
+      <div className="w-full grid md:grid-cols-3 xl:grid-cols-5 lg gap-7 px-4 md:px-0">
           {CASES_LINKS[index].map((card) => <CaseLink key={card.id} {...card}></CaseLink>)}
       </div>
     )

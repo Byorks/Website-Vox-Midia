@@ -13,6 +13,7 @@ import './App.css';
 import CasesPage from './pages/Cases';
 import ServicesPage from './pages/Services';
 import ContactPage from './pages/Contact';
+import AboutUsPage from './pages/AboutUs';
 
 const router = createBrowserRouter ([
   {
@@ -23,7 +24,8 @@ const router = createBrowserRouter ([
       { path: 'cases', element: <CasesPage /> },
       { path: 'services', element: <ServicesPage />},
       { path: 'project', element: <ProjectPage />},
-      { path: 'contact', element: <ContactPage />}
+      { path: 'contact', element: <ContactPage />},
+      { path: 'about', element: <AboutUsPage />}
     ]
   }
 ]);
