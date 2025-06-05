@@ -7,8 +7,6 @@ import { ChevronRight } from "lucide-react";
 import { Mail } from "lucide-react";
 import { Phone } from "lucide-react";
 
-// TODO -> Colocar o Maps funcional
-
 export default function ContactPage () {
     return(
         <main>
