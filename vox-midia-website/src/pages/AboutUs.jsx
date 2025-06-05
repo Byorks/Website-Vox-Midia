@@ -8,7 +8,7 @@ export default function AboutUsPage() {
     <main>
       <section className="w-full m-auto container lg:max-w-4/5 px-4 sm:px-12 lg:px-6 pt-16 mb-32">
         <PrincipalTitle>Sobre nós</PrincipalTitle>
-        <div className="bg-vox-2 border-[.5px] border-vox-5 py-12 px-24 flex items-center flex-col mb-16">
+        <div className="bg-vox-2 border-[.5px] border-vox-5 px-6 py-24 md:py-12 md:px-24 flex items-center flex-col mb-16 gap-6 md:gap-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="231"
@@ -75,25 +75,31 @@ export default function AboutUsPage() {
             </p>
         </div>
 
-        <div className="w-full grid pb-3">
-          <div className="w-2/5">
-            <MainTitle>Visão</MainTitle>
+        <div className="w-full grid pb-3 mb-20 md:mb-0">
+          <div className="w-full md:w-2/5">
+            <MainTitle textAlign="font-left md:font-center"
+             marginBotton="mb-6"
+            >Visão</MainTitle>
             <p>
               Ser a referência em transformar negócios através da criatividade disruptiva e tecnologia, deixando um legado de inovação e impacto positivo.
             </p>
           </div>
         </div>
-        <div className="w-full flex justify-center pb-3">
-          <div className="w-2/5">
-            <MainTitle>Missão</MainTitle>
+        <div className="w-full flex justify-center pb-3 mb-20 md:mb-0">
+          <div className="w-full md:w-2/5">
+            <MainTitle textAlign="font-left md:font-center"
+             marginBotton="mb-6"
+            >Missão</MainTitle>
             <p>
               Impulsionamos empresas a<strong> superar desafios </strong>com soluções criativas e tecnológicas, onde a gamificação e o design multimídia reinventam experiências e resultados.
             </p>
           </div>
         </div>
-        <div className="w-full flex justify-end pb-3">
-          <div className="w-2/5">
-            <MainTitle>Missão</MainTitle>
+        <div className="w-full flex justify-end pb-3 mb-20 md:mb-0">
+          <div className="w-full md:w-2/5">
+            <MainTitle textAlign="font-left md:font-center"
+             marginBotton="mb-6"
+            >Proposta de Valor</MainTitle>
             <p>
               <strong>Revolucionamos </strong>processos empresariais com tecnologia e criatividade, criando conexões memoráveis e resultados mensuráveis — sempre com transparência e propósito.
             </p>
