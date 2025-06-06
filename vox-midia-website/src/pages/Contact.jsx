@@ -7,8 +7,6 @@ import { ChevronRight } from "lucide-react";
 import { Mail } from "lucide-react";
 import { Phone } from "lucide-react";
 
-// TODO -> Colocar o Maps funcional
-
 export default function ContactPage () {
     return(
         <main>
@@ -39,7 +37,7 @@ export default function ContactPage () {
                                 name={"email"}
                                 type={"email"}
                                 htmlFor={"email"}
-                                placeholder={"E-mail valido"}
+                                placeholder={"E-mail"}
                             ></FormInput>
 
                             <FormInput
@@ -49,7 +47,7 @@ export default function ContactPage () {
                                 name={"cellphone"}
                                 type={"text"}
                                 htmlFor={"cellphone"}
-                                placeholder={"(xx) 00 0000-0000"}
+                                placeholder={"(00) 00 0000-0000"}
                             ></FormInput>
                             
                             <FormInput
@@ -98,9 +96,13 @@ export default function ContactPage () {
                 <div className="grid md:grid-cols-2 gap-6 ">
                     <div>
                         <MainTitle>Venha conhecer</MainTitle>
-                        <p>
-                            Praesent sed ipsum a ex congue ultrices. Cras iaculis libero quis odio feugiat, eu efficitur urna tempus. Integer sagittis nulla felis, vel venenatis felis dignissim ac. In eget commodo risus. Sed consequat aliquam urna vel mollis. Curabitur non nunc egestas, ullamcorper libero sed, scelerisque neque. Praesent eleifend condimentum leo nec rutrum. Donec dapibus fermentum massa. Quisque iaculis suscipit diam.
+                        <p className="mb-4">
+                            Quer levar sua empresa para o próximo nível? Conheça a Vox & Mídia! Especialistas em gamificação, branding e soluções digitais, criamos experiências únicas que unem tecnologia, criatividade e estratégia para revolucionar sua comunicação e processos.
                         </p>
+                        <p className="mb-4">
+                            <strong>Agende uma visita ou converse com nossa equipe </strong>– vamos cocriar o futuro da sua marca!
+                        </p>
+                        <p><em>Inovação que conecta. Resultados que transformam. </em></p>
                     </div>
                     <div className="aspect-square ">
                     <iframe className="w-full h-full xl:h-3/4"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.699038988061!2d-46.57559521389226!3d-23.61512420879654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5d11c031c57f%3A0x8f79f71018065a16!2sSENAI%20S%C3%A3o%20Caetano%20do%20Sul%20-%20Inform%C3%A1tica%20-%20Escola%20Senai%20%22Paulo%20Antonio%20Skaf%22!5e0!3m2!1spt-BR!2sbr!4v1749087937508!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

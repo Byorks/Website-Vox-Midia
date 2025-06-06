@@ -1,14 +1,32 @@
 import PrincipalTitle from "../components/PrincipalTitle";
 import MainTitle from "../components/MainTitle";
 import MainButton from "../components/MainButton";
+import "./AboutUs.css"
 
 
 export default function AboutUsPage() {
+  
+  //Todo -> Animar texto entrando
+
+  //const observer = new IntersectionObserver((entries) => {
+  //   entries.forEach((entry) =>{
+  //     if (entry.isIntersecting){
+  //       entry.target.classList.add('show')
+  //     }else {
+  //       entry.target.classList.remove('show')
+  //     }
+  //   })
+  // })
+   
+  // const hiddenElements = document.querySelectorAll('.hidden-container');
+  // console.log(hiddenElements);
+  
+  // hiddenElements.forEach((el) => observer.observe(el));
   return (
     <main>
       <section className="w-full m-auto container lg:max-w-4/5 px-4 sm:px-12 lg:px-6 pt-16 mb-32">
         <PrincipalTitle>Sobre nós</PrincipalTitle>
-        <div className="bg-vox-2 border-[.5px] border-vox-5 px-6 py-24 md:py-12 md:px-24 flex items-center flex-col mb-16 gap-6 md:gap-0">
+        <div className="bg-vox-2 border-[.5px] border-vox-5 px-6 py-24 md:py-12 md:px-24 flex items-center flex-col mb-16 gap-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="231"
@@ -76,7 +94,7 @@ export default function AboutUsPage() {
         </div>
 
         <div className="w-full grid pb-3 mb-20 md:mb-0">
-          <div className="w-full md:w-2/5">
+          <div className="w-full md:w-2/6">
             <MainTitle textAlign="font-left md:font-center"
              marginBotton="mb-6"
             >Visão</MainTitle>
@@ -86,7 +104,7 @@ export default function AboutUsPage() {
           </div>
         </div>
         <div className="w-full flex justify-center pb-3 mb-20 md:mb-0">
-          <div className="w-full md:w-2/5">
+          <div className="w-full md:w-2/6">
             <MainTitle textAlign="font-left md:font-center"
              marginBotton="mb-6"
             >Missão</MainTitle>
@@ -96,7 +114,7 @@ export default function AboutUsPage() {
           </div>
         </div>
         <div className="w-full flex justify-end pb-3 mb-20 md:mb-0">
-          <div className="w-full md:w-2/5">
+          <div className={`w-full md:w-2/6  `}>
             <MainTitle textAlign="font-left md:font-center"
              marginBotton="mb-6"
             >Proposta de Valor</MainTitle>
@@ -107,7 +125,7 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="bg-vox-3 w-full flex flex-col justify-center items-center py-24">
+      <section className="bg-vox-3 w-full flex flex-col justify-center items-center py-24 mb-32">
           <MainTitle 
             marginBotton="mb-6"
           >

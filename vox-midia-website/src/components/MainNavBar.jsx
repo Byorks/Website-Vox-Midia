@@ -5,6 +5,7 @@ import './MainNavBar.css';
 import { useState } from 'react';
 // Router
 import { NavLink } from 'react-router';
+import { Link } from 'react-router';
 
 // Icons
 import { Menu } from 'lucide-react';
@@ -30,16 +31,22 @@ export default function MainNavBar (props) {
         <header id="main-header" className='h-[66px] w-full bg-vox-3/80 backdrop-blur-[4px] px-6 md:px-8 flex justify-between items-center sticky z-1000 top-0 left-0'>
             
             <div className='flex'>
-                  <img 
-                    className='md:block hidden'
-                    src={voxLogoHorizontal}
-                    alt="Vox & Mídia Logotipo" 
-                />
+                <Link to="/">
+                    <img 
+                        className='md:block hidden'
+                        src={voxLogoHorizontal}
+                        alt="Vox & Mídia Logotipo" 
+                    />
+                </Link>
+                  
 
-                <img 
+                <Link to="/">
+                    <img 
                     className='md:hidden order-2 px-6'
                     src={voxLogoVertical} alt="Vox & Mídia Logotipo" 
-                />
+                    />
+                </Link>
+                
                 {/* On click está invertendo o valor de open ao clicar */}
                 <div onClick={()=> setOpen(!open)} className='block md:hidden cursor-pointer order-1'>
                     <Menu className={open ? 'hidden' : undefined} color='white' size={32}/>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CASES_LINKS } from "../data";
+import { PROJECTS } from "../data";
 import MainTitle from "../components/MainTitle";
 import PrincipalTitle from "../components/PrincipalTitle";
 import TabButton from "../components/TabButton";
@@ -14,23 +14,33 @@ export default function CasesPage() {
     setSelectedTopic(selectedButton);
   }
 
+  // Puxar os conteúdos, mas devo pensar se puxo apenas o que vai aparecer por padrão ou tudo
   if ( selectedTopic ) {
-    let index;
-    if (selectedTopic == 'web'){
-      index = 0;
-    } 
-    else if (selectedTopic == 'social-media'){
-      index = 1;
-    }
-    else {
-      index = 2;
-    }
+    let webCases = PROJECTS.filter((project) => (project.type == 'web'));
+    let socialMidiaCases = PROJECTS.filter((project) => (project.type == 'social-media'));
+    let brandingCases = PROJECTS.filter((project) => (project.type == 'branding'));
     
-    tabContent = (
+    if (selectedTopic == 'web'){
+      tabContent = (
       <div className="w-full grid md:grid-cols-3 xl:grid-cols-5 lg gap-7 px-4 md:px-0">
-          {CASES_LINKS[index].map((card) => <CaseLink key={card.id} {...card}></CaseLink>)}
+          {webCases.map((card) => <CaseLink key={card.id} {...card}></CaseLink>)}
       </div>
     )
+    } 
+    else if (selectedTopic == 'social-media'){
+      tabContent = (
+      <div className="w-full grid md:grid-cols-3 xl:grid-cols-5 lg gap-7 px-4 md:px-0">
+          {socialMidiaCases.map((card) => <CaseLink key={card.id} {...card}></CaseLink>)}
+      </div>
+    )
+    }
+    else {
+      tabContent = (
+      <div className="w-full grid md:grid-cols-3 xl:grid-cols-5 lg gap-7 px-4 md:px-0">
+          {brandingCases.map((card) => <CaseLink key={card.id} {...card}></CaseLink>)}
+      </div>
+    )
+    }
   } 
   return (
     <>
