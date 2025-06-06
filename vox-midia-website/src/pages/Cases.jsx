@@ -1,5 +1,11 @@
 import { useState } from "react";
+<<<<<<< HEAD
 import { PROJECTS } from "../data";
+=======
+import { WEB_CASES } from "../data";
+import { SOCIAL_MEDIA_CASES } from "../data";
+import { BRANDING_CASES } from "../data";
+>>>>>>> b0d5c55a1d7056180f9cdc5b3ebd0eb5d5b5d4d8
 import MainTitle from "../components/MainTitle";
 import PrincipalTitle from "../components/PrincipalTitle";
 import TabButton from "../components/TabButton";
@@ -16,28 +22,43 @@ export default function CasesPage() {
 
   // Puxar os conteúdos, mas devo pensar se puxo apenas o que vai aparecer por padrão ou tudo
   if ( selectedTopic ) {
+<<<<<<< HEAD
     let webCases = PROJECTS.filter((project) => (project.type == 'web'));
     let socialMidiaCases = PROJECTS.filter((project) => (project.type == 'social-media'));
     let brandingCases = PROJECTS.filter((project) => (project.type == 'branding'));
+=======
+>>>>>>> b0d5c55a1d7056180f9cdc5b3ebd0eb5d5b5d4d8
     
     if (selectedTopic == 'web'){
       tabContent = (
       <div className="w-full grid md:grid-cols-3 xl:grid-cols-5 lg gap-7 px-4 md:px-0">
+<<<<<<< HEAD
           {webCases.map((card) => <CaseLink key={card.id} {...card}></CaseLink>)}
+=======
+          {WEB_CASES.map((card) => <CaseLink key={card.id} {...card}></CaseLink>)}
+>>>>>>> b0d5c55a1d7056180f9cdc5b3ebd0eb5d5b5d4d8
       </div>
     )
     } 
     else if (selectedTopic == 'social-media'){
       tabContent = (
       <div className="w-full grid md:grid-cols-3 xl:grid-cols-5 lg gap-7 px-4 md:px-0">
+<<<<<<< HEAD
           {socialMidiaCases.map((card) => <CaseLink key={card.id} {...card}></CaseLink>)}
+=======
+          {SOCIAL_MEDIA_CASES.map((card) => <CaseLink key={card.id} {...card}></CaseLink>)}
+>>>>>>> b0d5c55a1d7056180f9cdc5b3ebd0eb5d5b5d4d8
       </div>
     )
     }
     else {
       tabContent = (
       <div className="w-full grid md:grid-cols-3 xl:grid-cols-5 lg gap-7 px-4 md:px-0">
+<<<<<<< HEAD
           {brandingCases.map((card) => <CaseLink key={card.id} {...card}></CaseLink>)}
+=======
+          {BRANDING_CASES.map((card) => <CaseLink key={card.id} {...card}></CaseLink>)}
+>>>>>>> b0d5c55a1d7056180f9cdc5b3ebd0eb5d5b5d4d8
       </div>
     )
     }
