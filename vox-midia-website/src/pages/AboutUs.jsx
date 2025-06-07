@@ -2,26 +2,14 @@ import PrincipalTitle from "../components/PrincipalTitle";
 import MainTitle from "../components/MainTitle";
 import MainButton from "../components/MainButton";
 import "./AboutUs.css"
-
+import AOS from "aos";
+import 'aos/dist/aos.css'
 
 export default function AboutUsPage() {
-  
-  //Todo -> Animar texto entrando
+  AOS.init({
+  });
 
-  //const observer = new IntersectionObserver((entries) => {
-  //   entries.forEach((entry) =>{
-  //     if (entry.isIntersecting){
-  //       entry.target.classList.add('show')
-  //     }else {
-  //       entry.target.classList.remove('show')
-  //     }
-  //   })
-  // })
-   
-  // const hiddenElements = document.querySelectorAll('.hidden-container');
-  // console.log(hiddenElements);
-  
-  // hiddenElements.forEach((el) => observer.observe(el));
+  AOS.refresh();
   return (
     <main>
       <section className="w-full m-auto container lg:max-w-4/5 px-4 sm:px-12 lg:px-6 pt-16 mb-32">
@@ -93,7 +81,7 @@ export default function AboutUsPage() {
             </p>
         </div>
 
-        <div className="w-full grid pb-3 mb-20 md:mb-0">
+        <div data-aos="fade-right" data-aos-duration="1100" data-aos-anchor-placement="top-bottom" className="w-full grid pb-3 mb-20 md:mb-0">
           <div className="w-full md:w-2/6">
             <MainTitle textAlign="font-left md:font-center"
              marginBotton="mb-6"
@@ -103,7 +91,7 @@ export default function AboutUsPage() {
             </p>
           </div>
         </div>
-        <div className="w-full flex justify-center pb-3 mb-20 md:mb-0">
+        <div data-aos="fade-right" data-aos-duration="1200"  className="w-full flex justify-center pb-3 mb-20 md:mb-0">
           <div className="w-full md:w-2/6">
             <MainTitle textAlign="font-left md:font-center"
              marginBotton="mb-6"
@@ -113,7 +101,7 @@ export default function AboutUsPage() {
             </p>
           </div>
         </div>
-        <div className="w-full flex justify-end pb-3 mb-20 md:mb-0">
+        <div data-aos="fade-right" data-aos-duration="1300" className="w-full flex justify-end pb-3 mb-20 md:mb-0">
           <div className={`w-full md:w-2/6  `}>
             <MainTitle textAlign="font-left md:font-center"
              marginBotton="mb-6"

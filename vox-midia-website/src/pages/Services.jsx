@@ -92,7 +92,7 @@ export default function ServicesPage() {
 
   return (
     <main>
-      <section className="w-screen m-auto py-20">
+      <section className="w-full m-auto container lg:max-w-4/5 px-4 sm:px-12 lg:px-6 pt-16 mb-32">
         <MainTitle>Onde Atuamos</MainTitle>
         <div className="container m-auto">
           <div className="flex gap-8 items-center flex-col md:flex-row justify-around">
