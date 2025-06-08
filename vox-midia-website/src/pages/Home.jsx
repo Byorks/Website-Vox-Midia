@@ -10,19 +10,19 @@ import { ScrollRestoration } from "react-router";
 export default function HomePage () {
     let AREASCARDS = [
         {
-            path: "cases/marketing",
+            path: "/cases",
             area: "Marketing"
         },
         {
-            path: "cases/web",
+            path: "/cases",
             area: "Web"
         },
         {
-            path: "cases/branding",
+            path: "/cases",
             area: "Branding"
         },
         {
-            path: "cases/gamificacao",
+            path: "/cases",
             area: "Gamificação"
         },
     ]
@@ -37,7 +37,7 @@ export default function HomePage () {
             <section className="w-screen mt-16 mb-8 flex flex-col items-center">
                 <MainTitle>Cases</MainTitle>
                 <HomeCasesCarousel />
-                <MainButton space="my-8">Conheça o portfólio</MainButton>
+                <MainButton path="/cases" space="my-8">Conheça o portfólio</MainButton>
             </section>
 
             <section className="bg-vox-2 py-8 my-8">

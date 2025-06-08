@@ -34,6 +34,11 @@ export default function HomeCasesCarousel(props) {
       img: "",
       path: "",
     },
+    {
+      title: "",
+      img: "",
+      path: "",
+    },
   ]
 
   return (
@@ -48,9 +53,9 @@ export default function HomeCasesCarousel(props) {
       {/* Pode ser inserido um array com objetos e vamos renderizando o que quisermos */}
       <CarouselContent className="-ml-3 flex justify-around">
         {CASES.map((_, index) => (
-          // Aqui controla o tamanho de cada div
+          // Aqui controla quantos cards vao ocupar um slide ou nesse caso a div
           <CarouselItem className="basis-1/1 md:basis-1/3 pl-3" key={index}> 
-            <div className="flex justify-around">
+            <div className="w-full h-full flex justify-around">
                 <CaseCard></CaseCard>
             </div>
           

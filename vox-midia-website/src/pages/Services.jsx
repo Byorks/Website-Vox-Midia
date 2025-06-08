@@ -137,7 +137,7 @@ export default function ServicesPage() {
         </div>
         <div className="flex flex-col items-center">
             <ServicesCarousel cardList={CARDSMARKETING}></ServicesCarousel>
-            <MainButton space="mt-12">Conheça exemplos</MainButton>
+            <MainButton path="/cases/social-media" space="mt-12">Conheça exemplos</MainButton>
         </div>
       </section>
 
@@ -149,8 +149,8 @@ export default function ServicesPage() {
           </p>
         </div>
         <div className="flex flex-col items-center">
-            <ServicesCarousel cardList={CARDSBRANDING}></ServicesCarousel>
-            <MainButton space="mt-12">Conheça exemplos</MainButton>
+            <ServicesCarousel cardList={CARDSTECNOLOGY}></ServicesCarousel>
+            <MainButton path="/cases/web" space="mt-12">Conheça exemplos</MainButton>
         </div>
       </section>
 
@@ -163,7 +163,7 @@ export default function ServicesPage() {
         </div>
         <div className="flex flex-col items-center">
             <ServicesCarousel cardList={CARDSBRANDING}></ServicesCarousel>
-            <MainButton space="mt-12">Conheça exemplos</MainButton>
+            <MainButton path="/cases/branding" space="mt-12">Conheça exemplos</MainButton>
         </div>
       </section>
     </main>

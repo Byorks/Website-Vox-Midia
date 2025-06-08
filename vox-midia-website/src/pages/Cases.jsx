@@ -7,13 +7,18 @@ import CaseLink from "../components/CardCasesLink";
 import AOS from "aos";
 import 'aos/dist/aos.css'
 import { ScrollRestoration } from "react-router";
+import { useParams } from "react-router";
 
 export default function CasesPage() {
   AOS.init();
   AOS.refresh();
+  
+  const {service} = useParams()
 
-  const [selectedTopic, setSelectedTopic] = useState("web");
+  const [selectedTopic, setSelectedTopic] = useState ( service ?  service : "web");
 
+  console.log("service -> " + service);
+  console.log(service);
   let tabContent;
 
   function handleSelect(selectedButton) {
