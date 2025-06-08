@@ -6,6 +6,7 @@ import TabButton from "../components/TabButton";
 import CaseLink from "../components/CardCasesLink";
 import AOS from "aos";
 import 'aos/dist/aos.css'
+import { ScrollRestoration } from "react-router";
 
 export default function CasesPage() {
   AOS.init();
@@ -50,6 +51,7 @@ export default function CasesPage() {
   return (
     <>
       <main>
+        <ScrollRestoration />
         <section className="w-full m-auto container lg:max-w-4/5 px-4 sm:px-12 lg:px-6 mb-32 md:mb-48 pt-16">
           <div className="w-full lg:h-[299px] m-auto bg-vox-2 border-vox-5 border-[.5px] py-6 px-6 md:px-9 mb-32 md:mb-16">
             <div className="flex justify-end flex-col h-[70%]">

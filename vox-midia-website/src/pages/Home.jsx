@@ -5,6 +5,7 @@ import CaseCard from "../components/CardCases";
 import MainButton from "../components/MainButton";
 import AreaSmallCard from "../components/AreaSmallCard";
 import HomeRatingsCarousel from "../components/HomeRatingsCarousel";
+import { ScrollRestoration } from "react-router";
 
 export default function HomePage () {
     let AREASCARDS = [
@@ -27,7 +28,8 @@ export default function HomePage () {
     ]
 
     return (
-        	<>
+        <main>
+            <ScrollRestoration />
             <section className="w-screen">
                 <HomeCarousel></HomeCarousel>
             </section>
@@ -54,6 +56,6 @@ export default function HomePage () {
                 <MainTitle>Avaliações</MainTitle>  
                 <HomeRatingsCarousel></HomeRatingsCarousel>                 
             </section>
-        </>
+        </main>
     );
 }

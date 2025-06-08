@@ -1,17 +1,21 @@
 import PrincipalTitle from "../components/PrincipalTitle";
 import MainTitle from "../components/MainTitle";
 import MainButton from "../components/MainButton";
-import "./AboutUs.css"
 import AOS from "aos";
 import 'aos/dist/aos.css'
+import { ScrollRestoration } from "react-router";
+
+// Posso renomear um componente importado dessa forma
+import { HashLink } from "react-router-hash-link";
 
 export default function AboutUsPage() {
-  AOS.init({
-  });
+  AOS.init();
 
   AOS.refresh();
   return (
+    
     <main>
+      <ScrollRestoration />
       <section className="w-full m-auto container lg:max-w-4/5 px-4 sm:px-12 lg:px-6 pt-16 mb-32">
         <PrincipalTitle>Sobre nós</PrincipalTitle>
         <div className="bg-vox-2 border-[.5px] border-vox-5 px-6 py-24 md:py-12 md:px-24 flex items-center flex-col mb-16 gap-6">
@@ -114,13 +118,19 @@ export default function AboutUsPage() {
       </section>
 
       <section className="bg-vox-3 w-full flex flex-col justify-center items-center py-24 mb-32">
-          <MainTitle 
-            marginBotton="mb-6"
-          >
-            Solicite um orçamento
-          </MainTitle>
-          <MainButton>Fale conosco</MainButton>
-      </section>
+        <MainTitle 
+          marginBotton="mb-6"
+        >
+          Solicite um orçamento
+        </MainTitle>
+
+        
+        <MainButton
+          path="/contact"
+          hash="#contact-forms"
+        > Fale conosco
+        </MainButton>
+          </section>
     </main>
   );
 }

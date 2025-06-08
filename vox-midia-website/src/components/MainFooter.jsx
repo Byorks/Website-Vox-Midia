@@ -11,11 +11,11 @@ import { Phone } from "lucide-react";
 export default function MainFooter() {
 
  let LINKS = [
-   {name:"Home", path:"/"},
-   {name:"Cases", path:"/"},
-   {name:"Serviços", path:"/"},
-   {name:"Contato", path:"/"},
-   {name:"Sobre nós", path:"/"},
+   {name:"Home", path:"/home"},
+   {name:"Cases", path:"/cases"},
+   {name:"Serviços", path:"/services"},
+   {name:"Contato", path:"/contact"},
+   {name:"Sobre nós", path:"/about"},
  ];
 
   return (
@@ -89,6 +89,8 @@ export default function MainFooter() {
         <div className="bg-vox-1 h-8 mt-16 w-full">
           <div className="@md:w-[80%] m-auto max-w-[1128px] p-2">
             <p className="text-sm">©Vox&Mídia 2025</p>
+            <p className="text-sm">snoopy</p>
+
           </div>
          
         </div>

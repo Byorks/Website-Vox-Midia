@@ -2,7 +2,8 @@ import MainTitle from "../components/MainTitle";
 import ServiceCard from "../components/CardServices";
 import ServicesCarousel from "../components/ServicesCarousel";
 import MainButton from "../components/MainButton";
-import { Link } from "react-router";
+import { Link, ScrollRestoration } from "react-router";
+import { useRef } from "react";
 
 export default function ServicesPage() {
   let CARDS = [
@@ -90,23 +91,45 @@ export default function ServicesPage() {
     },
   ];
 
+  const tecnologyRef = useRef(null);
+  const brandingRef = useRef(null);
+  const marketingRef = useRef(null);
+
+  const scrollToSection = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <main>
+    <ScrollRestoration />
       <section className="w-full m-auto container lg:max-w-4/5 px-4 sm:px-12 lg:px-6 pt-16 mb-32">
         <MainTitle>Onde Atuamos</MainTitle>
         <div className="container m-auto">
           <div className="flex gap-8 items-center flex-col md:flex-row justify-around">
-            {CARDS.map((card) => (
+            {/* {CARDS.map((card) => (
               <Link to={card.path}>
                 <ServiceCard>{card.title}</ServiceCard>
               </Link>
-            ))}
+            ))} */}
+            {/* <button className="bg-amber-300" onClick={() => {
+              tecnologyRef.current?.scrollIntoView({
+                behavior: 'smooth'
+              })
+            }}>
+              Tentativa 1000
+            </button> */}
+            <ServiceCard onSectionScroll={() => scrollToSection(marketingRef)} reference={tecnologyRef}>Marketing</ServiceCard>
+            <ServiceCard onSectionScroll={() => scrollToSection(tecnologyRef)} reference={tecnologyRef}>Tecnologia</ServiceCard>
+            <ServiceCard onSectionScroll={() => scrollToSection(brandingRef)} reference={tecnologyRef}>Branding</ServiceCard>
           </div>
         </div>
       </section>
 
-      <section id="marketing-section" className="w-screen m-auto bg-vox-2 flex items-center flex-col">
-        <div className="flex flex-col mt-12">
+      <section ref={marketingRef} id="marketing-section" className="w-screen m-auto bg-vox-2 flex items-center flex-col mb-32 py-32">
+        <div className="flex flex-col ">
           <MainTitle marginBotton={"mb-3"}>Marketing</MainTitle>
           <p className="text-center mb-12">
             Estratégias que geram conexões reais e resultados mensuráveis
@@ -114,12 +137,12 @@ export default function ServicesPage() {
         </div>
         <div className="flex flex-col items-center">
             <ServicesCarousel cardList={CARDSMARKETING}></ServicesCarousel>
-            <MainButton space="my-12">Conheça exemplos</MainButton>
+            <MainButton space="mt-12">Conheça exemplos</MainButton>
         </div>
       </section>
 
-      <section id="tecnology-section" className="w-screen m-auto bg-vox-2 flex items-center flex-col">
-        <div className="flex flex-col mt-12">
+      <section ref={tecnologyRef} id="tecnology-section" className="w-screen m-auto bg-vox-2 flex items-center flex-col mb-32 py-32">
+        <div className="flex flex-col">
           <MainTitle marginBotton={"mb-3"}> Tecnologia</MainTitle>
           <p className="text-center mb-12">
             Soluções inteligentes que impulsionam negócios
@@ -127,12 +150,12 @@ export default function ServicesPage() {
         </div>
         <div className="flex flex-col items-center">
             <ServicesCarousel cardList={CARDSBRANDING}></ServicesCarousel>
-            <MainButton space="my-12">Conheça exemplos</MainButton>
+            <MainButton space="mt-12">Conheça exemplos</MainButton>
         </div>
       </section>
 
-      <section id="branding-section" className="w-screen m-auto mb-32 bg-vox-2 flex items-center flex-col">
-        <div className="flex flex-col mt-12">
+      <section ref={brandingRef} id="branding-section" className="w-screen m-auto mb-32 bg-vox-2 flex items-center flex-col py-32">
+        <div className="flex flex-col ">
           <MainTitle marginBotton={"mb-3"}> Branding</MainTitle>
           <p className="text-center mb-12">
             Construção de marcas memoráveis
@@ -140,7 +163,7 @@ export default function ServicesPage() {
         </div>
         <div className="flex flex-col items-center">
             <ServicesCarousel cardList={CARDSBRANDING}></ServicesCarousel>
-            <MainButton space="my-12">Conheça exemplos</MainButton>
+            <MainButton space="mt-12">Conheça exemplos</MainButton>
         </div>
       </section>
     </main>

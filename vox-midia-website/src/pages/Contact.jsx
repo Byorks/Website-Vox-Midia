@@ -6,10 +6,12 @@ import ButtonIcon from "../components/ButtonIcon";
 import { ChevronRight } from "lucide-react";
 import { Mail } from "lucide-react";
 import { Phone } from "lucide-react";
+import { ScrollRestoration } from "react-router";
 
 export default function ContactPage () {
     return(
         <main>
+           <ScrollRestoration />
             <section className="w-full m-auto sm:container lg:max-w-4/5 px-4 sm:px-12 lg:px-6 pt-16">
                 <PrincipalTitle>Contato</PrincipalTitle>
                 <div className="bg-vox-2 border-[.5px] border-vox-5 py-12 px-6 md:px-24 mt-16">
@@ -17,7 +19,7 @@ export default function ContactPage () {
                     <p>
                         Estamos muito animados com o seu interesse em transformar e potencializar a sua comunicação com criatividade e inovação! Por favor, preencha o formulário abaixo para que possamos criar uma proposta personalizada, alinhada às suas necessidades e aos valores do seu negócio. Juntos, vamos inspirar, inovar e deixar uma marca positiva em cada projeto.
                     </p>
-                    <form className="w-full my-6 flex flex-col gap-6">
+                    <form id="contact-forms" className="w-full my-6 flex flex-col gap-6">
                         <div className="flex flex-col gap-6 md:grid md:grid-cols-2">
                             <FormInput
                                 required={"required"}
