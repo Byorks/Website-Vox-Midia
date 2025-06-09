@@ -17,7 +17,7 @@ export default function ProjectPage(props) {
 
   let content = ( 
     project.images.map((image) => ( 
-      <div className="w-full lg:h-[60vh] m-auto bg-vox-2 border-vox-5 border-[.5px]  rounded-vox-5 bg-vox-3 p-3">
+      <div className="w-full lg:h-[40vh] m-auto bg-vox-2 border-vox-5 border-[.5px]  rounded-vox-5 bg-vox-3 p-3">
         <img className="w-full h-full object-cover rounded-[3.5px]" src={image} alt="" />
       </div>
       
@@ -30,10 +30,10 @@ export default function ProjectPage(props) {
       <section className="w-full m-auto container lg:max-w-4/5 px-4 sm:px-12 lg:px-6 py-16">
         <div className="w-full m-auto">
           <PrincipalTitle>{project.title}</PrincipalTitle>
-          <div className="w-full h-auto max-h-4/5 lg:h-[299px] m-auto bg-vox-2 border-vox-5 border-[.5px] rounded-vox-5 bg-vox-3 p-3">
+          <div className="w-full h-auto max-h-4/5 lg:h-[499px] m-auto bg-vox-2 border-vox-5 border-[.5px] rounded-vox-5 bg-vox-3 p-3">
             <img className="w-full h-full object-cover rounded-[3.5px]" src={project.images[3]} alt="" />
           </div>
-          <div className="w-full grid grid-cols-12 gap-5 my-12">
+          <div className="w-full flex flex-col md:grid grid-cols-12 gap-5 my-12">
             <div className="col-span-6">
                 <MainTitle>Descrição do Projeto</MainTitle>
                 {/* <p>
@@ -43,8 +43,8 @@ export default function ProjectPage(props) {
                   {project.description}
                 </p>
             </div>
-            <div className="col-span-6 w-full h-full bg-vox-2 border-vox-5 border-[.5px]  rounded-vox-5 bg-vox-3 p-3">
-                <img className="aspect-square w-full h-full object-cover rounded-[3.5px]" src={project.images[0]}  alt="" />
+            <div className="col-span-6 w-full h-full  bg-vox-2 border-vox-5 border-[.5px]  rounded-vox-5 bg-vox-3 p-3">
+                <img className="aspect-square w-full h-full max-h-[500px] object-cover rounded-[3.5px]" src={project.images[0]}  alt="" />
             </div>
           </div>
           {/* TODO tirar uma imagem */}
