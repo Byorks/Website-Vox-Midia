@@ -30,7 +30,8 @@ export default function MainNavBar (props) {
     return (
         <header id="main-header" className='h-[66px] w-full bg-vox-3/80 backdrop-blur-[4px]  md:px-8 flex justify-between items-center sticky z-1000 top-0 left-0'>
             
-            <div className='p-6 md:p-0 flex w-full justify-between'>
+            <div className='p-6 md:p-0 flex w-full'>
+                {/* Logo Desktop */}
                 <Link className='hidden md:block' to="/">
                     <img 
                         className='md:block hidden'
@@ -39,22 +40,23 @@ export default function MainNavBar (props) {
                     />
                 </Link>
                   
-
-                <Link to="/">
+                {/* Logo Mobiile */}
+                <Link className='order-2' to="/">
                     <img 
-                    className='md:hidden order-2 '
+                    className='md:hidden pl-6'
                     src={voxLogoVertical} alt="Vox & Mídia Logotipo" 
                     />
                 </Link>
                 
-                {/* On click está invertendo o valor de open ao clicar */}
+                {/* Menu hamburguer ícone */}
                 <div onClick={()=> setOpen(!open)} className='block md:hidden cursor-pointer order-1'>
                     <Menu className={open ? 'hidden' : undefined} color='white' size={32}/>
                     <X className={ !open ? 'hidden' : undefined }  color='white' size={32}></X>
                 </div>
               
             </div>
-          
+
+            {/* Menu */}
             <nav className='m-0'>
                 <ul className={`${open ? 'left-0' : 'left-[-400px]'} ${navStyle}`}>
                     {
