@@ -60,7 +60,7 @@ export default function ProjectPage(props) {
             </div>
           </div>
           {/* TODO tirar uma imagem */}
-          <div className="grid gap-6">
+          <div className="grid gap-3">
             {content}
           </div>
           
