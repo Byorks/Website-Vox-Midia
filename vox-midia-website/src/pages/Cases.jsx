@@ -58,7 +58,7 @@ export default function CasesPage() {
       <main>
         <ScrollRestoration />
         <section className="w-full m-auto container lg:max-w-4/5 px-4 sm:px-12 lg:px-6 mb-32 md:mb-48 pt-16">
-          <div className="w-full lg:h-[299px] m-auto bg-vox-2 border-vox-5 border-[.5px] py-6 px-6 md:px-9 mb-32 md:mb-16">
+          <div className="w-full lg:min-h-[299px] flex flex-col justify-center  m-auto bg-vox-2 border-vox-5 border-[.5px] py-6 px-6 md:px-9 mb-32 md:mb-16">
             <div className="flex justify-end flex-col h-[70%]">
               <PrincipalTitle className="">Cases</PrincipalTitle>
               <MainTitle marginBotton="mb-3">
@@ -67,10 +67,8 @@ export default function CasesPage() {
             </div>
 
             <div className="w-full flex justify-start h-auto">
-              <p className="w-full lg:w-[50%]">
-                Praesent sed ipsum a ex congue ultrices. Cras iaculis libero
-                quis odio feugiat, eu efficitur urna tempus. Integer sagittis
-                nulla felis, vel venenatis felis dignissim ac.{" "}
+              <p className="w-full xl:w-[60%]">
+               Seleção de projetos onde cada detalhe – do conceito à execução – foi pensado para gerar impacto. Brandings que construíram legados, interfaces que simplificaram complexidades e estratégias digitais que amplificaram vozes.
               </p>
             </div>
           </div>

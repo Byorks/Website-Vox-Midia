@@ -28,10 +28,11 @@ export default function MainNavBar (props) {
     let navStyle = 'md:flex md:items-center md:gap-6 md:pb-0 pb-12 md:static absolute left-0 top-[66px] md:bg-vox-3/0 md:backdrop-blur-none bg-vox-3/80 backdrop-blur-[4px] md:z-auto z-[-1] md:w-auto w-3xs md:pl-0  transition-all duration-300 ease-in-out rounded-br-vox-5 md:border-0 border-vox-6 border-b-[0.5px] border-r-[0.5px]';
 
     return (
-        <header id="main-header" className='h-[66px] w-full bg-vox-3/80 backdrop-blur-[4px] px-6 md:px-8 flex justify-between items-center sticky z-1000 top-0 left-0'>
+        <header id="main-header" className='h-[66px] w-full bg-vox-3/80 backdrop-blur-[4px]  md:px-8 flex justify-between items-center sticky z-1000 top-0 left-0'>
             
-            <div className='flex'>
-                <Link to="/">
+            <div className='p-6 md:p-0 flex w-full'>
+                {/* Logo Desktop */}
+                <Link className='hidden md:block' to="/">
                     <img 
                         className='md:block hidden'
                         src={voxLogoHorizontal}
@@ -39,27 +40,28 @@ export default function MainNavBar (props) {
                     />
                 </Link>
                   
-
-                <Link to="/">
+                {/* Logo Mobiile */}
+                <Link className='order-2' to="/">
                     <img 
-                    className='md:hidden order-2 px-6'
+                    className='md:hidden pl-6'
                     src={voxLogoVertical} alt="Vox & Mídia Logotipo" 
                     />
                 </Link>
                 
-                {/* On click está invertendo o valor de open ao clicar */}
+                {/* Menu hamburguer ícone */}
                 <div onClick={()=> setOpen(!open)} className='block md:hidden cursor-pointer order-1'>
                     <Menu className={open ? 'hidden' : undefined} color='white' size={32}/>
                     <X className={ !open ? 'hidden' : undefined }  color='white' size={32}></X>
                 </div>
               
             </div>
-          
+
+            {/* Menu */}
             <nav className='m-0'>
                 <ul className={`${open ? 'left-0' : 'left-[-400px]'} ${navStyle}`}>
                     {
                     LINKS.map((link) => (
-                        <li key={link.name} className='text-base md:py-0 py-4 pl-6 border-b-[0.5px] border-vox-6 md:border-0 '>
+                        <li key={link.name} className='lg:w-[95px] text-base md:py-0 py-4 pl-6 lg:p-3  border-b-[0.5px] border-vox-6 md:border-0 '>
                             <NavLink to={link.path} className='text-vox-7 hover:text-vox-8 hover:font-bold font-pt-sans duration-300 ease-in-out'>{link.name}</NavLink>
                         </li>
                     ))

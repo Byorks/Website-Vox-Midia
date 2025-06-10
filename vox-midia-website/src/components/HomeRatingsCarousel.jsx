@@ -50,7 +50,7 @@ export default function HomeRatingsCarousel(props) {
       <CarouselContent className="-ml-3 flex justify-around">
         {CASES.map((_, index) => (
           // Aqui controla o tamanho de cada div
-          <CarouselItem className="basis-1/1 md:basis-1/3 pl-3 flex justify-center" key={index}>
+          <CarouselItem className="basis-1/1 lg:basis-1/3 pl-3 flex justify-center" key={index}>
             <RatingCard />
           </CarouselItem>
         ))}

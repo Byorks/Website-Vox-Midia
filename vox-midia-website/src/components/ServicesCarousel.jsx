@@ -24,7 +24,8 @@ export default function ServicesCarousel({cardList}) {
               <CarouselContent className="-ml-3 flex justify-around">
                 {cardList.map((card, index) => (
                   // Aqui controla o tamanho de cada div
-                  <CarouselItem className="basis-1/1 md:basis-1/3 pl-3" key={index}> 
+                  // TODO -> Fazer aparecer 2 cards no tablet
+                  <CarouselItem className="basis-1/1 g:basis-1/3 pl-3" key={index}> 
                     <div className="flex justify-around">
                         <ServiceDescriptionCard {...card}></ServiceDescriptionCard>
                     </div>

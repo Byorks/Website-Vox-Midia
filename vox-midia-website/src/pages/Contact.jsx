@@ -14,7 +14,7 @@ export default function ContactPage () {
            <ScrollRestoration />
             <section className="w-full m-auto sm:container lg:max-w-4/5 px-4 sm:px-12 lg:px-6 pt-16">
                 <PrincipalTitle>Contato</PrincipalTitle>
-                <div className="bg-vox-2 border-[.5px] border-vox-5 py-12 px-6 md:px-24 mt-16">
+                <div className="bg-vox-2 border-[.5px] border-vox-5 py-12 px-6 md:px-12 lg:px-24 mt-16">
                     <MainTitle>Solicite uma cotação</MainTitle>
                     <p>
                         Estamos muito animados com o seu interesse em transformar e potencializar a sua comunicação com criatividade e inovação! Por favor, preencha o formulário abaixo para que possamos criar uma proposta personalizada, alinhada às suas necessidades e aos valores do seu negócio. Juntos, vamos inspirar, inovar e deixar uma marca positiva em cada projeto.
