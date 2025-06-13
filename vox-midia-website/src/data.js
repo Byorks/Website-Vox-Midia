@@ -13,12 +13,16 @@ import ohMyPetImg5 from "./assets/cases/oh-my-pet/layout-project-5.jpg";
 export const PROJECTS = [
   {
     id: "0",
-    type: "web",
+    type: "branding",
     title: "Oh My Pet!",
-    description:
-      "Desenvolvemos um website moderno e intuitivo para a Oh My Pet!, uma organização dedicada à adoção responsável e ao bem-estar animal. O projeto teve como objetivo transmitir a missão acolhedora e comprometida da marca, facilitando a conexão entre animais resgatados e futuros tutores.",
+    description:{
+      resume: "Criando uma identidade que abraça pets e tutores com empatia, alegria e qualidade",
+      challenge: "A Oh My Pet! é uma empresa dedicada a transformar a vida de pets e seus tutores, combinando cuidados de alta qualidade com uma forte missão social de resgate e adoção de animais. O desafio era desenvolver uma identidade de marca que transmitisse empatia, alegria e profissionalismo, refletindo tanto o lado emocional da causa animal quanto a excelência dos seus serviços.",
+      solution: "Criamos um branding completo que equilibra calor humano e profissionalismo, posicionando a Oh My Pet! como uma marca que cuida tanto dos animais quanto da experiência dos seus tutores.",
+      results: ""
+    },
     logo: ohMyPetImg,
-    images: [ohMyPetImg1, ohMyPetImg2, ohMyPetImg3, ohMyPetImg4],
+    images: [ohMyPetImg1, ohMyPetImg2, ohMyPetImg3, ohMyPetImg4, ohMyPetImg5],
   },
   {
     id: "2",

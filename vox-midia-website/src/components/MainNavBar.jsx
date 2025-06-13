@@ -62,12 +62,13 @@ export default function MainNavBar (props) {
                     {
                     LINKS.map((link) => (
                         <li key={link.name} className='lg:w-[95px] text-base md:py-0 py-4 pl-6 lg:p-3  border-b-[0.5px] border-vox-6 md:border-0 '>
-                            <NavLink to={link.path} className='text-vox-7 hover:text-vox-8 hover:font-bold font-pt-sans duration-300 ease-in-out'>{link.name}</NavLink>
+                            <NavLink onClick={() => setOpen(!open)} to={link.path} className='text-vox-7 hover:text-vox-8 hover:font-bold font-pt-sans duration-300 ease-in-out'>{link.name}</NavLink>
                         </li>
                     ))
                     }
 
-                    <MainButton  
+                    <MainButton
+                        function={() => setOpen(!open)}  
                         space='md:ml-0 ml-6 md:mt-0 mt-4'
                         path='/contact'
                     >Contato

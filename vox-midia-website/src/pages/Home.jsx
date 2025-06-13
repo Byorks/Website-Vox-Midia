@@ -10,19 +10,19 @@ import { ScrollRestoration } from "react-router";
 export default function HomePage () {
     let AREASCARDS = [
         {
-            path: "/cases",
+            path: "/services#marketing-section",
             area: "Marketing"
         },
         {
-            path: "/cases",
+            path: "services#tecnology-section",
             area: "Web"
         },
         {
-            path: "/cases",
+            path: "/services#branding-section",
             area: "Branding"
         },
         {
-            path: "/cases",
+            path: "/services#tecnology-section",
             area: "Gamificação"
         },
     ]
@@ -46,7 +46,7 @@ export default function HomePage () {
                     <div className="flex flex-col items-center md:flex-row md:justify-between gap-4">
                         {/* Criar lista com map */}
                         {AREASCARDS.map((card) => (
-                           <AreaSmallCard to={card.path}>{card.area}</AreaSmallCard>
+                           <AreaSmallCard path={card.path}>{card.area}</AreaSmallCard>
                         ))}
                     </div>
                 </div>

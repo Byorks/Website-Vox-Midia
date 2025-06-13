@@ -39,14 +39,6 @@ const router = createBrowserRouter([
 // Aqui estou passando o router para o RouterProvider
 function App() {
   return (
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route index element={<HomePage/>} />
-    //     <Route path='/home' element={<HomePage/>} />
-    //     <Route path='/contact' element ={<ContactPage/>} />
-    //     <Route path='/about' element ={<AboutUsPage/>} />
-    //   </Routes>
-    // </BrowserRouter>
     <RouterProvider router={router} />
   );
 }
